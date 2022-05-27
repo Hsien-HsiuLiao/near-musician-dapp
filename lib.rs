@@ -30,7 +30,7 @@ enum ticketPreSale{
 }
 
 
-// collection
+// collection, https://www.near-sdk.io/contract-structure/collections UnorderedMap, UnorderedSet and Vector
 pub struct favSongs {
   songs: LookupMap<accountId, favsongs>
     }
