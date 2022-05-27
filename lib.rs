@@ -1,3 +1,9 @@
+#[near-bindgen]
+pub struct register {
+  artistName: String
+}
+
+
 // transition to different states
 enum ticketPreSale{
   started,
