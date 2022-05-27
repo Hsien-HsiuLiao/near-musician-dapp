@@ -1,6 +1,7 @@
 #[near-bindgen]
 pub struct register {
-  artistName: String
+  artistName: String, 
+  account: accountid
 }
 
 
