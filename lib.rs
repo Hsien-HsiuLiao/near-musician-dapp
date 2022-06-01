@@ -38,3 +38,32 @@ pub struct favSongs {
 //storage
     
 //context, env
+
+
+use near_sdk::{near_bindgen, env};
+
+#[near_bindgen]
+#[derive(Default, BorshDeserialize, BorshSerialize)]
+pub struct StatusMessage {
+    records: HashMap<AccountId, String>,
+  //or songbyartist: <HashMap<AccountId, songlist>
+}
+pub struct songlist {
+  songs: Vec<songs>
+}
+pub struct songs {
+  name: String,
+  price: u8
+}
+
+#[near_bindgen]
+impl StatusMessage {
+    pub fn set_status(&mut self, message: String) {
+        let account_id = env::signer_account_id();
+        self.records.insert(account_id, message);
+    }
+
+    pub fn get_status(&self, account_id: AccountId) -> Option<String> {
+        self.records.get(&account_id).cloned()
+    }
+}
