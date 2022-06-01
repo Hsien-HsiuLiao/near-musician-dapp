@@ -1,7 +1,7 @@
 # near-musician-dapp
 
 
-1st iteration: musician visits site and adds songs for sale. Nputs name(self) song title, price
+1st iteration: musician visits site and adds songs for sale. Nputs name(self) song title, price, social media links
 
 user buys song, tips band,  becomes fan
 
